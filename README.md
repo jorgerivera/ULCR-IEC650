@@ -1,7 +1,12 @@
 ULCR-IEC650
 ===========
 
-Universidad Latina de Costa Rica - IEC-650 Laboratorio de Sistemas Digitales
+IEC-650 Laboratorio de Sistemas Digitales
+-----------------------------------------
+
+Universidad Latina de Costa Rica - Sede Heredia
+
+
 
 Repositorio de información del curso Laboratorio de Sistemas Digitales impartido por el profesor Ing. Jorge M. Rivera Gutiérrez.
 
