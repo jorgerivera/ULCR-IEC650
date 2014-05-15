@@ -66,7 +66,6 @@
     \begin{itemize}
       \item<1> Sentar bases de trabajo prácticas, teóricas y operativas.
       \item<1> Comprobar aspectos generales relacionados con los sistemas embebidos.
-      \item<1> Comprobar aspectos generales relacionados con los controladores de interfaz periférica.
       \item<1> Comprobar aspectos generales relacionados con la plataforma Arduino.
       \item<1> Implementar soluciones dedicadas basadas en sistemas embebidos.
     \end{itemize}
@@ -111,6 +110,7 @@
  \item Uso de la memoria
  \item Uso de sensores
  \item Uso de la comunicación en red
+ \item Optimización de recursos
 \end{itemize}
 \end{block}
 \end{frame}
@@ -144,9 +144,9 @@ Este es un curso en el que se aprovechan los conocimientos y experiencias de los
 \begin{frame}{Estrategias de aprendizaje}
   \begin{block}{Prácticas de Laboratorio:}
     \begin{description}
-      \item[\textbf{Preparación Previa:}] Se realiza sobre la base del estudio conceptual orientado por el profesor e incluye la generación de los datos teóricos del experimento.
-      \item[\textbf{Ejecución:}] Implica el desarrollo del experimento, la tabulación de los datos prácticos y la anotación de observaciones.
-      \item[\textbf{Análisis:}] Incluye un análisis comparativo entre los datos teóricos y los datos prácticos para validar los resultados, así como la generación de conclusiones sobre los contenidos temáticos abordados.
+      \item[\textbf{Preparación Previa:}] Se realiza sobre la base del estudio conceptual orientado por el profesor e incluye el estudio del problema y los recursos disponibles para resolverlo.
+      \item[\textbf{Ejecución:}] Implica el desarrollo de la solución, la depuración del mismo. Esta puede llevarse a cabo parcialmente en el aula y parcialmente fuera de la misma.
+      \item[\textbf{Análisis:}] Incluye un análisis de las técnicas utilizadas y las optimizaciones posibles, así como la generación de conclusiones apropiadas resultantes del desarrollo de la solución.
     \end{description}
   \end{block}
 \end{frame}
@@ -169,6 +169,18 @@ Este es un curso en el que se aprovechan los conocimientos y experiencias de los
 	1 Proyecto integrador	&	30\%\\\hline
 	6 Pruebas cortas		&	10\%\\\hline\hline
 	TOTAL					&	100\%\\\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}{Proyecto Integrador}
+\begin{center}
+\begin{tabular}{|l|r|}\hline
+	Requerimientos				&	5\%\\\hline
+	Funcionamiento				&	10\%\\\hline
+	Informe						&	10\%\\\hline
+	Exposición					&	5\%\\\hline\hline
+	TOTAL						&	30\%\\\hline
 \end{tabular}
 \end{center}
 \end{frame}
@@ -212,11 +224,11 @@ Este es un curso en el que se aprovechan los conocimientos y experiencias de los
 \begin{block}{Fechas de entrega}
   \begin{itemize}[<+->]
     \item Los informes de las prácticas de laboratorio se deberán presentar una semana natural después de la realización de la práctica a la hora de iniciar la sesión.
-    \item En caso de no haber solicitado una extensión por anticipado o de haberse vencido la extensión, la máxima nota estará dada por la fórmula:
+    \item En caso de no haber solicitado una extensión por anticipado o de haberse vencido una extensión que haya sido aprobada, la máxima nota estará dada por la fórmula:
 
       \[ M = 100-\frac{1.367}{10}\cdot n^{1.367} \]
 
-    donde $M$ es la nota máxima y $n$ es la cantidad de horas de atraso en la entrega.
+    donde $M$ es la nota máxima y $n$ es la cantidad de horas de atraso en la entrega. 
   \end{itemize}
 \end{block}
 \end{frame}
@@ -224,13 +236,23 @@ Este es un curso en el que se aprovechan los conocimientos y experiencias de los
 \begin{frame}{Asistencia}
 \begin{block}{Asistencia}
   \begin{itemize}[<+->]
+  	\item El horario del curso es jueves de 19:30 a 22:00.
     \item El curso es de asistencia obligatoria. Se requiere de una asistencia al 80\% de las horas lectivas.
     \item El curso consta de 15 sesiones. Se requiere la asistencia a 12 sesiones para aprobar el curso.
     \item Las ausencias podrán ser justificadas por iniciativa del estudiante cuando haya una razón que así lo amerite.
-    \item Las ausencias a evaluaciones deberán ser tramitadas de acuerdo con lo especificado en el reglamento de la Universidad.
   \end{itemize}
 \end{block}
 \end{frame}
+
+\begin{frame}{Asistencia}
+\begin{block}{Asistencia}
+  \begin{itemize}[<+->]
+	\item Las ausencias a evaluaciones deberán ser tramitadas de acuerdo con lo especificado en el reglamento de la Universidad.
+    \item Las llegadas tardías después de las 20:15 o el retiro por más de 45 minutos de la clase serán consideradas como ausencias, a excepción de aquellos casos donde el estudiante haya concluido las asignaciones correspondientes a la sesión de ese día.
+  \end{itemize}
+\end{block}
+\end{frame}
+
 
 \section{Bibliografía}
 
@@ -280,7 +302,8 @@ Este es un curso en el que se aprovechan los conocimientos y experiencias de los
    3 		& Arduino: puerto serie		& Quiz 2 + Práctica 2 \\ \hline
    4 		& Arduino: puerto serie		& Práctica 2  \\ \hline
    5		& Arduino: memorias   		& Quiz 3 + Práctica 3  \\ \hline
-   6 		& Arduino: máquinas de estados	& Quiz 4 + Práctica 4  \\ \hline
+   6 		& Arduino: máquinas de estados	& Quiz 4 + Práctica 4  \\
+    		& 							& Borrador de req. PI  \\ \hline
 
 
   \end{tabular}}
@@ -294,13 +317,15 @@ Este es un curso en el que se aprovechan los conocimientos y experiencias de los
    Semana 	& \multicolumn{1}{c|}{Contenido Temático} & \multicolumn{1}{c|}{Actividades} \\ \hline \hline
    7 		& Arduino: máquinas de estados	 & Práctica 4 \\ \hline
    8 		& Arduino: LCD					 & Quiz 5 + Práctica 5 \\ \hline
-   9 		& Arduino: LCD      		     & Práctica 5 \\ \hline
+
+   9 		& Arduino: LCD      		     & Práctica 5 \\ 
+    		& 							& Requerimientos PI  \\ \hline
    10 		& Arduino: librerías			& Práctica 6  \\ \hline
    11		& Arduino: librerías	& Quiz 6 + Práctica 6  \\ \hline
    12 		& \multicolumn{2}{c|}{Desarrollo de Proyecto Integrador}  \\ \hline
    13 		& \multicolumn{2}{c|}{Desarrollo de Proyecto Integrador}  \\ \hline
    14		& \multicolumn{2}{c|}{Desarrollo de Proyecto Integrador}  \\ \hline
-   15 		& \multicolumn{2}{c|}{Desarrollo de Proyecto Integrador}  \\ \hline
+   15 		& \multicolumn{2}{c|}{Presentación final de Proyecto Integrador}  \\ \hline
   \end{tabular}}
  \end{center}
 \end{frame}
