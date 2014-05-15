@@ -8,6 +8,7 @@
 \usepackage{pgfpages}
 \usepackage{tikz}
 \usepackage[spanish]{babel}
+\usepackage[normalem]{ulem} % to use \sout{} for strikethrough
 
 %\setbeameroption{show notes on second screen}
 %\setbeamersize{sidebar width left=50pt}
@@ -94,8 +95,8 @@
 \begin{frame}{Programación de Sistemas Embebidos}
 \begin{block}{}
 \begin{itemize}
- \item Lenguaje C++
- \item Lenguaje Ensamblador
+ \item Lenguaje C/C++
+ \item \sout{Lenguaje Ensamblador}
 \end{itemize}
 \end{block}
 \end{frame}
@@ -164,10 +165,10 @@ Este es un curso en el que se aprovechan los conocimientos y experiencias de los
 \begin{frame}{Evaluación}
 \begin{center}
 \begin{tabular}{|l|r|}\hline
-	6 Prácticas		&	60\%\\\hline
+	6 Prácticas				&	60\%\\\hline
 	1 Proyecto integrador	&	30\%\\\hline
-	5 Pruebas cortas	&	10\%\\\hline\hline
-	TOTAL			&	100\%\\\hline
+	6 Pruebas cortas		&	10\%\\\hline\hline
+	TOTAL					&	100\%\\\hline
 \end{tabular}
 \end{center}
 \end{frame}
@@ -201,8 +202,8 @@ Este es un curso en el que se aprovechan los conocimientos y experiencias de los
 \begin{frame}{Presentación de informes y evaluaciones}
 \begin{block}{Presentación de informes y evaluaciones}
   \begin{itemize}[<+->]
-    \item Todo documento preparado para este curso deberá ser entregado de forma impresa y su código fuente en formato digital \textbf{y en formato PDF} al correo electrónico \texttt{jm.rivera.g@gmail.com}.
-    \item En los informes se descontarán hasta 10 puntos por el incumplimiento de los requerimientos de formato, redacción, ortografía y calidad del documento.
+    \item Todo documento preparado para este curso deberá ser entregado en el aula virtual en los periodos especificados. Para algunos informes se solicitará también una versión impresa.
+    \item En los informes se asignará un 10\% correspondiente a la calidad del documento. Estos puntos podrán perderse por el incumplimiento de los requerimientos de formato, redacción, ortografía y calidad del documento.
   \end{itemize}
 \end{block}
 \end{frame}
@@ -210,7 +211,7 @@ Este es un curso en el que se aprovechan los conocimientos y experiencias de los
 \begin{frame}{Fechas de entrega}
 \begin{block}{Fechas de entrega}
   \begin{itemize}[<+->]
-    \item Los informes de las prácticas de laboratorio se deberán presentar una semana natural después de la realización de la práctica.
+    \item Los informes de las prácticas de laboratorio se deberán presentar una semana natural después de la realización de la práctica a la hora de iniciar la sesión.
     \item En caso de no haber solicitado una extensión por anticipado o de haberse vencido la extensión, la máxima nota estará dada por la fórmula:
 
       \[ M = 100-\frac{1.367}{10}\cdot n^{1.367} \]
@@ -224,7 +225,7 @@ Este es un curso en el que se aprovechan los conocimientos y experiencias de los
 \begin{block}{Asistencia}
   \begin{itemize}[<+->]
     \item El curso es de asistencia obligatoria. Se requiere de una asistencia al 80\% de las horas lectivas.
-    \item El curso consta de 14 sesiones. Se requiere la asistencia a 12 sesiones para aprobar el curso.
+    \item El curso consta de 15 sesiones. Se requiere la asistencia a 12 sesiones para aprobar el curso.
     \item Las ausencias podrán ser justificadas por iniciativa del estudiante cuando haya una razón que así lo amerite.
     \item Las ausencias a evaluaciones deberán ser tramitadas de acuerdo con lo especificado en el reglamento de la Universidad.
   \end{itemize}
@@ -274,12 +275,12 @@ Este es un curso en el que se aprovechan los conocimientos y experiencias de los
   \begin{tabular}{|c|c|c|}\hline
 
    Semana 	& \multicolumn{1}{c|}{Contenido Temático} & \multicolumn{1}{c|}{Actividades} \\ \hline \hline
-   1 		& Intro y Revisión del programa & Práctica 1\\ \hline
-   2 		& Arduino: C++ y puerto serie   & Charla + Práctica 2 \\ \hline
-   3 		& Arduino: C++ y puerto serie	& Práctica 2 \\ \hline
-   4 		& Arduino: Memorias		& Charla + Práctica 3  \\ \hline
-   5		& Arduino: Memorias   	& Práctica 3  \\ \hline
-   6 		& Arduino: Máquinas de estados		& Charla + Práctica 4  \\ \hline
+   1 		& Intro y Revisión del programa & Introducción a C\\ \hline
+   2 		& Arduino: C++ y I/O   		& Quiz 1 + Práctica 1 \\ \hline
+   3 		& Arduino: puerto serie		& Quiz 2 + Práctica 2 \\ \hline
+   4 		& Arduino: puerto serie		& Práctica 2  \\ \hline
+   5		& Arduino: memorias   		& Quiz 3 + Práctica 3  \\ \hline
+   6 		& Arduino: máquinas de estados	& Quiz 4 + Práctica 4  \\ \hline
 
 
   \end{tabular}}
@@ -290,13 +291,12 @@ Este es un curso en el que se aprovechan los conocimientos y experiencias de los
  \begin{center}
  {\small
   \begin{tabular}{|c|c|c|}\hline
-
    Semana 	& \multicolumn{1}{c|}{Contenido Temático} & \multicolumn{1}{c|}{Actividades} \\ \hline \hline
-   7 		& Arduino: Máquinas de estados	 & Práctica 4 \\ \hline
-   8 		& Arduino: LCD  	             & Charla + Práctica 5 \\ \hline
-   9 		& Arduino: LCD      		     & Charla + Práctica 5 \\ \hline
-   10 		& Arduino: Librerías		& Charla + Práctica 6  \\ \hline
-   11		& Arduino: Librerías	& Charla + Práctica 6  \\ \hline
+   7 		& Arduino: máquinas de estados	 & Práctica 4 \\ \hline
+   8 		& Arduino: LCD					 & Quiz 5 + Práctica 5 \\ \hline
+   9 		& Arduino: LCD      		     & Práctica 5 \\ \hline
+   10 		& Arduino: librerías			& Práctica 6  \\ \hline
+   11		& Arduino: librerías	& Quiz 6 + Práctica 6  \\ \hline
    12 		& \multicolumn{2}{c|}{Desarrollo de Proyecto Integrador}  \\ \hline
    13 		& \multicolumn{2}{c|}{Desarrollo de Proyecto Integrador}  \\ \hline
    14		& \multicolumn{2}{c|}{Desarrollo de Proyecto Integrador}  \\ \hline
