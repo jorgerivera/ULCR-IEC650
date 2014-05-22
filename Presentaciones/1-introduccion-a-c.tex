@@ -10,6 +10,7 @@
 \usepackage[spanish]{babel}
 \usepackage[normalem]{ulem} % to use \sout{} for strikethrough
 
+
 %\setbeameroption{show notes on second screen}
 %\setbeamersize{sidebar width left=50pt}
 
@@ -59,290 +60,60 @@
  \end{block}
 \end{frame}
 
-
-\section{Objetivos}
-
-\pageframe{Objetivos}
-
-\subsection{Objetivo general}
-
-\begin{frame}{Objetivo general}
-  \begin{block}{Objetivo general}
-    Implementar soluciones a problemas de aplicación a partir del uso de sistemas embebidos.
-  \end{block}
-\end{frame}
-
-\subsection{Objetivos específicos}
-
-\begin{frame}{Objetivos específicos}
-  \begin{block}{Objetivos específicos}
-    \begin{itemize}
-      \item<1> Sentar bases de trabajo prácticas, teóricas y operativas.
-      \item<1> Comprobar aspectos generales relacionados con los sistemas embebidos.
-      \item<1> Comprobar aspectos generales relacionados con la plataforma Arduino.
-      \item<1> Implementar soluciones dedicadas basadas en sistemas embebidos.
-    \end{itemize}
-  \end{block}
-\end{frame}
-
-
-\section{Contenidos}
-
-\pageframe{Contenidos}
-
-\subsection[Introducción]{Introducción}
-
-\begin{frame}{Introducción}
-  \begin{block}{}
-  \begin{itemize}
-    \item Uso del equipo de laboratorio
-    \item Repaso general
-    \item Normas de trabajo
-  \end{itemize}
-  \end{block}
-\end{frame}
-
-\subsection[Embebidos]{Programación de Sistemas Embebidos}
-
-\begin{frame}{Programación de Sistemas Embebidos}
-\begin{block}{}
-\begin{itemize}
- \item Lenguaje C/C++
- \item \sout{Lenguaje Ensamblador}
-\end{itemize}
-\end{block}
-\end{frame}
-
-\subsection[Arduino]{Plataforma Arduino}
-
-\begin{frame}{Plataforma Arduino}
-\begin{block}{}
-\begin{itemize}
- \item Uso de I/Os
- \item Uso de LCD
- \item Uso de la memoria
- \item Uso de sensores
- \item Uso de la comunicación en red
- \item Optimización de recursos
-\end{itemize}
-\end{block}
-\end{frame}
-
-\section{Metodología}
-
-\pageframe{Metodología}
-
-\begin{frame}{Metodología}
-
-Este es un curso en el que se aprovechan los conocimientos y experiencias de los estudiantes para posibilitar un aprendizaje permanente y significativo, desde el punto de vista del análisis crítico, reflexivo y creativo de resolución de problemas. Con este fin se desarrollan métodos participativos y colaborativos que enriquecen la experiencia de enseñanza y aprendizaje, así como la motivación del estudiante, en un ambiente de respeto mutuo por las opiniones y en donde la ética es parte del compromiso permanente de todos los actores del proceso formativo.
-
-\end{frame}
-
-\section{Estrategias de aprendizaje}
-
-\pageframe{Estrategias de aprendizaje}
-
-\begin{frame}{Estrategias de aprendizaje}
-  \begin{block}{Charlas Didácticas}
-    El docente realiza la exposición de los contenidos temáticos en forma de exposición oral interactiva. A través de ella se logra la transmisión de conocimientos y se ofrece un enfoque crítico de la disciplina, con lo que se lleva a los discentes a descubrir las relaciones que existen entre los diversos conceptos.
-  \end{block}
-\end{frame}
-
-\begin{frame}{Estrategias de aprendizaje}
-  \begin{block}{Prácticas de Laboratorio:}
-    Permite que los estudiantes, organizados en grupos, profundicen, consoliden y comprueben los fundamentos teóricos de la asignatura mediante un proceso de experimentación, donde el profesor asume un rol de asesor del proceso formativo. Para su desarrollo se deben seguir los siguientes pasos:
-  \end{block}
-\end{frame}
-
-\begin{frame}{Estrategias de aprendizaje}
-  \begin{block}{Prácticas de Laboratorio:}
-    \begin{description}
-      \item[\textbf{Preparación Previa:}] Se realiza sobre la base del estudio conceptual orientado por el profesor e incluye el estudio del problema y los recursos disponibles para resolverlo.
-      \item[\textbf{Ejecución:}] Implica el desarrollo de la solución, la depuración del mismo. Esta puede llevarse a cabo parcialmente en el aula y parcialmente fuera de la misma.
-      \item[\textbf{Análisis:}] Incluye un análisis de las técnicas utilizadas y las optimizaciones posibles, así como la generación de conclusiones apropiadas resultantes del desarrollo de la solución.
-    \end{description}
-  \end{block}
-\end{frame}
-
-
-\begin{frame}{Estrategias de aprendizaje}
-  \begin{block}{Proyectos Integradores}
-    Conllevan un desarrollo grupal de prototipos por medio de los que se genera una solución a un problema de aplicación y tienen como fin el hacer confluir diferentes temas específicos. En ellos el docente funge como tutor del proceso de generación de las soluciones.
-  \end{block}
-\end{frame}
-
-\section{Evaluaci\'on}
-
-\pageframe{Evaluación}
-
-\begin{frame}{Evaluación}
+\begin{frame}{Tipos de Variables}
+\begin{block}{Otros tipos}
 \begin{center}
-\begin{tabular}{|l|r|}\hline
-	6 Prácticas				&	60\%\\\hline
-	1 Proyecto integrador	&	30\%\\\hline
-	6 Pruebas cortas		&	10\%\\\hline\hline
-	TOTAL					&	100\%\\\hline
-\end{tabular}
+ \begin{tabular}{lcc}\hline
+ 	Tipo	& 	 Tamaño & Rango \\\hline\hline
+{\tt boolean} &  8-bits & True, False \\\hline
+{\tt char} &  8-bits & 0 \ldots 255 (ASCII) \\\hline
+{\tt byte} &  8-bits & 0 \ldots 255 \\\hline
+{\tt void} & --- & --- \\\hline
+ \end{tabular}
 \end{center}
+\end{block}
 \end{frame}
 
-\begin{frame}{Proyecto Integrador}
-\begin{center}
-\begin{tabular}{|l|r|}\hline
-	Requerimientos				&	5\%\\\hline
-	Funcionamiento				&	10\%\\\hline
-	Informe						&	10\%\\\hline
-	Exposición					&	5\%\\\hline\hline
-	TOTAL						&	30\%\\\hline
-\end{tabular}
-\end{center}
+\begin{frame}{Declaración de variables}
+\begin{block}{Sin incializar}
+{\tt int a;}
+
+{\tt byte b;}
+
+{\tt float c;}
+\end{block}
+\begin{block}{Con valor inicial}
+{\tt int a = 100;}
+
+{\tt byte b = 45;}
+
+{\tt float c = 3.14;}
+\end{block}
 \end{frame}
 
-\section{Observaciones}
-
-\pageframe{Observaciones}
-
-\begin{frame}{Observaciones generales}
-  \begin{block}{Observaciones generales}
-    \begin{itemize}[<+->]
-      \item Se atenderán las disposiciones del Reglamento del Régimen Estudiantil.
-      \item Se atenderán las disposiciones del reglamento de uso del Laboratorio de Ingeniería Electrónica.
-      \item El curso es convalidable, \textbf{no} puede presentarse por suficiencia y \textbf{no} tiene derecho a examen de ampliación.
-    \end{itemize}
+\begin{frame}{Asignación de variables}
+  \begin{block}{Asignaciones}
+  	El símbolo = se utiliza para asignar valores. El valor obtenido al lado derecho del símbolo se introduce en la variable especificada a la izquierda.
+  \end{block}
+  \begin{block}
+	{\tt a = b + c;}
   \end{block}
 \end{frame}
 
-\begin{frame}{Presentación de informes y evaluaciones}
-\begin{block}{Presentación de informes y evaluaciones}
-  \begin{itemize}[<+->]
-    \item Los informes y evaluaciones deberán ser realizados con una ortografía y redacción de nivel universitario.
-    \item Los informes deberán ser preparados usando el formato IEEE Transactions. La descripción de este formato y las plantillas para el mismo pueden ser encontrados en \url{http://bit.ly/bN3uDr}.
-    \item Los informes \textbf{deberán} ser realizados utilizando el sistema de preparación de documentos \LaTeX.
-    \item Las imágenes y los diagramas utilizados en los informes deberán ser de buena calidad y generados utilizando programas apropiados para dicha tarea.
-  \end{itemize}
-\end{block}
+\section{Funciones}
+
+\pageframe{Funciones}
+
+
+\begin{frame}{Funciones}
+  \begin{block}{Funciones}
+    Debe especificarse un tipo de retorno.
+    
+    Deben ponerse los tipos de las variables que se reciben como parámetro.
+    
+    El código debe estar entre llaves.
+  \end{block}
 \end{frame}
-
-
-\begin{frame}{Presentación de informes y evaluaciones}
-\begin{block}{Presentación de informes y evaluaciones}
-  \begin{itemize}[<+->]
-    \item Todo documento preparado para este curso deberá ser entregado en el aula virtual en los periodos especificados. Para algunos informes se solicitará también una versión impresa.
-    \item En los informes se asignará un 10\% correspondiente a la calidad del documento. Estos puntos podrán perderse por el incumplimiento de los requerimientos de formato, redacción, ortografía y calidad del documento.
-  \end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}{Fechas de entrega}
-\begin{block}{Fechas de entrega}
-  \begin{itemize}[<+->]
-    \item Los informes de las prácticas de laboratorio se deberán presentar una semana natural después de la realización de la práctica a la hora de iniciar la sesión.
-    \item En caso de no haber solicitado una extensión por anticipado o de haberse vencido una extensión que haya sido aprobada, la máxima nota estará dada por la fórmula:
-
-      \[ M = 100-\frac{1.367}{10}\cdot n^{1.367} \]
-
-    donde $M$ es la nota máxima y $n$ es la cantidad de horas de atraso en la entrega. 
-  \end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}{Asistencia}
-\begin{block}{Asistencia}
-  \begin{itemize}[<+->]
-  	\item El horario del curso es jueves de 19:30 a 22:00.
-    \item El curso es de asistencia obligatoria. Se requiere de una asistencia al 80\% de las horas lectivas.
-    \item El curso consta de 15 sesiones. Se requiere la asistencia a 12 sesiones para aprobar el curso.
-    \item Las ausencias podrán ser justificadas por iniciativa del estudiante cuando haya una razón que así lo amerite.
-  \end{itemize}
-\end{block}
-\end{frame}
-
-\begin{frame}{Asistencia}
-\begin{block}{Asistencia}
-  \begin{itemize}[<+->]
-	\item Las ausencias a evaluaciones deberán ser tramitadas de acuerdo con lo especificado en el reglamento de la Universidad.
-    \item Las llegadas tardías después de las 20:15 o el retiro por más de 45 minutos de la clase serán consideradas como ausencias, a excepción de aquellos casos donde el estudiante haya concluido las asignaciones correspondientes a la sesión de ese día.
-  \end{itemize}
-\end{block}
-\end{frame}
-
-
-\section{Bibliografía}
-
-\pageframe{Bibliografía}
-\nocite{*}
-
-\begin{frame}{Bibliografía}
-
-\begin{thebibliography}{5}
- \bibitem{Texto}
-  Monk, S.
-  \textit{Programming Arduino. Getting Started with Sketches}.
-  Estados Unidos de América: McGraw-Hill Professional,
-  2011.
- \bibitem{Cons1}
-  Galeano, G.
-  \textit{Programación de Sistemas Embebidos en C}.
-  Mexico: Alfaomega,
-  2009.
- \bibitem{Cons2}
-  Torrente, O.
-  \textit{Arduino. Curso Práctico de Formación}.
-  McGraw Hill,
-  Mexico: Alfaomega,
-  2013.
- \bibitem{Cons3}
-  Valdés, F. y Pallás, R.
-  \textit{Microcontroladores. Fundamentos y Aplicaciones con PIC}.
-  Mexico: Alfaomega,
-  2007.
-\end{thebibliography}
-
-\end{frame}
-
-\section{Cronograma}
-
-\pageframe{Cronograma}
-
-\begin{frame}{Cronograma}
- \begin{center}
- {\small
-  \begin{tabular}{|c|c|c|}\hline
-
-   Semana 	& \multicolumn{1}{c|}{Contenido Temático} & \multicolumn{1}{c|}{Actividades} \\ \hline \hline
-   1 		& Intro y Revisión del programa & Introducción a C\\ \hline
-   2 		& Arduino: C++ y I/O   		& Quiz 1 + Práctica 1 \\ \hline
-   3 		& Arduino: puerto serie		& Quiz 2 + Práctica 2 \\ \hline
-   4 		& Arduino: puerto serie		& Práctica 2  \\ \hline
-   5		& Arduino: memorias   		& Quiz 3 + Práctica 3  \\ \hline
-   6 		& Arduino: máquinas de estados	& Quiz 4 + Práctica 4  \\
-    		& 							& Borrador de req. PI  \\ \hline
-
-
-  \end{tabular}}
- \end{center}
-\end{frame}
-
-\begin{frame}{Cronograma}
- \begin{center}
- {\small
-  \begin{tabular}{|c|c|c|}\hline
-   Semana 	& \multicolumn{1}{c|}{Contenido Temático} & \multicolumn{1}{c|}{Actividades} \\ \hline \hline
-   7 		& Arduino: máquinas de estados	 & Práctica 4 \\ \hline
-   8 		& Arduino: LCD					 & Quiz 5 + Práctica 5 \\ \hline
-
-   9 		& Arduino: LCD      		     & Práctica 5 \\ 
-    		& 							& Requerimientos PI  \\ \hline
-   10 		& Arduino: librerías			& Práctica 6  \\ \hline
-   11		& Arduino: librerías	& Quiz 6 + Práctica 6  \\ \hline
-   12 		& \multicolumn{2}{c|}{Desarrollo de Proyecto Integrador}  \\ \hline
-   13 		& \multicolumn{2}{c|}{Desarrollo de Proyecto Integrador}  \\ \hline
-   14		& \multicolumn{2}{c|}{Desarrollo de Proyecto Integrador}  \\ \hline
-   15 		& \multicolumn{2}{c|}{Presentación final de Proyecto Integrador}  \\ \hline
-  \end{tabular}}
- \end{center}
-\end{frame}
-
 
 
 \end{document}
