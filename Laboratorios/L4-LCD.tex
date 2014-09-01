@@ -3,7 +3,10 @@
 \usepackage[spanish]{babel}
 \usepackage{enumitem}
 
-\title{Laboratorio 3: Arduino - Memorias\\ y Tipos de Datos}
+\newcommand{\nombreproyecto}{LCD}
+
+
+\title{Laboratorio 4: \nombreproyecto}
 \author{Prof. Ing. Jorge Rivera G.}
 \date{\today}
 
@@ -15,7 +18,7 @@ urlcolor={black}}
 \usepackage[\MYhyperrefoptions]{hyperref}
 
 \begin{document}
-\hypersetup{pdftitle={Laboratorio 3: Memorias y Tipos de Datos},
+\hypersetup{pdftitle={Laboratorio 4: \nombreproyecto},
 pdfsubject={IEC-650 Laboratorio de Sistemas Digitales},
 pdfauthor={Ing. Jorge Rivera},
 pdfkeywords={arduino, sistemas digitales}}
@@ -26,7 +29,7 @@ pdfkeywords={arduino, sistemas digitales}}
 
 
 \begin{abstract}
-Esta es una práctica para aprender el uso de tipos de datos compuestos y memorias en el ambiente Arduino. Se utilizará la consola serial para visualizar strings y arreglos de caracteres.
+Esta es una práctica donde se utilizará un arduino y un LCD para mostrar una serie de mensajes que se seleccionarán desde la consola serial.
 \end{abstract}
 
 \section{Descripción}
@@ -41,44 +44,37 @@ Para esta práctica se necesitarán los siguientes materiales.
 \begin{tabular}{c|c}\hline
 	Cant. & \hspace{2cm}Material\hspace{2cm} \\\hline\hline
 	1 	& Arduino o tarjeta similar		\\\hline
+    1 	& LCD Sparkfun ADM1602K o similar \\\hline
 	1	& Computadora con puerto USB  	\\\hline	
 \end{tabular}
 \end{center}
-
-\textbf{Nota:} el Arduino Due no podrá ser utilizado para esta práctica, ya que carece de EEPROM.
 
 \section{Requerimientos}
 
 Para la conclusión satisfactoria de este laboratorio se deberán cumplir con los siguientes requerimientos:
 
 \begin{itemize}
-	\item Almacenar una serie de datos en la memoria EEPROM.
-	\item Leer los datos almacenados en la memoria EEPROM utilizando arreglos de caracteres.
-	\item Imprimir en la consola serial los datos obtenidos.
-	\item Leer diversos mensajes de la memoria de acuerdo con lo recibido por el puerto serial.
+	\item Crear un listado de 4 mensajes que se van a escribir en la pantalla de LCD, con los nombres \texttt{msjUno}, \texttt{msjDos}, \texttt{msjTres}, \texttt{msjCuatro}.
+    \item Mostrar en la pantalla LCD uno de los mensajes.
+    \item Usar una estructura similar a la creada en el laboratorio 3 que permita seleccionar uno de los mensajes para ser mostrados en el LCD.
+    \item al seleccionar una de las opciones, se deberá mostrar en el LCD el mensaje correspondiente.
 \end{itemize}
 
-
 \section{Procedimiento}
-
-\subsection{Charla preliminar}
-
-\begin{enumerate}
-	\item El profesor impartirá una breve charla sobre conceptos de importancia en el desarrollo del proyecto. Se deberá poner atención a esta charla y participar de forma activa con las preguntas y dudas que surjan.
-\end{enumerate}
 
 
 \subsection{Preparación}
 
-\begin{enumerate}[resume]
-	\item Se deberá realizar el diseño del programa en un diagrama de flujo sencillo. Este diagrama de flujo se deberá realizar en papel y ser mostrado al profesor antes de ser programado. Se sugiere utilizar bloques con operaciones sencillas en el diseño de tal forma que se puedan realizar implementaciones parciales.
+\begin{enumerate}
+	\item Se deberá realizar la lista de los mensajes que se van a utilizar.
 \end{enumerate}
 
 
 \subsection{Programación}
 
 \begin{enumerate}[resume]
-	\item Se deberá escribir el programa en la interfaz de Arduino.
+    \item Se deberá escribir un programa sencillo que solamente muestre un mensaje en el LCD. Utilice los tutoriales de Sparkfun y Arduino para verificar la conexión correcta del LCD y de la programación. \textbf{Se deberá mostrar este funcionamiento al profesor e incluirlo en el informe.}
+    \item Se deberá escribir el programa que realice el funcionamiento de los menús incluyendo la escritura de los mensajes en el LCD. \textbf{Este prorama también deberá incluirse en el informe.}
 \end{enumerate}
 
 \subsection{Verificación}
@@ -88,9 +84,8 @@ Para la conclusión satisfactoria de este laboratorio se deberán cumplir con lo
 	\item Cuando se haya concluido con todos los requerimientos, se deberá realizar una última demostración al profesor y se concluirá la práctica.
 \end{enumerate}
 
-\section{Informe}
 
-El informe que se deberá presentar constará de las siguientes partes:
+\section{Informe}
 
 \begin{enumerate}
   \item Encabezado
@@ -143,4 +138,4 @@ donde $M$ es la nota máxima y $n$ es la cantidad de horas de atraso en la entre
 
 donde $T$ corresponde al porcentaje obtenido de los rubros especificados anteriormente.
 
-\end{document}
+\end{document} 

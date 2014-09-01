@@ -3,7 +3,7 @@
 \usepackage[spanish]{babel}
 \usepackage{enumitem}
 
-\title{Laboratorio 3: Arduino - Memorias\\ y Tipos de Datos}
+\title{Laboratorio 5: M\'aquinas de estados}
 \author{Prof. Ing. Jorge Rivera G.}
 \date{\today}
 
@@ -15,7 +15,7 @@ urlcolor={black}}
 \usepackage[\MYhyperrefoptions]{hyperref}
 
 \begin{document}
-\hypersetup{pdftitle={Laboratorio 3: Memorias y Tipos de Datos},
+\hypersetup{pdftitle={Laboratorio 5: Máquinas de estados},
 pdfsubject={IEC-650 Laboratorio de Sistemas Digitales},
 pdfauthor={Ing. Jorge Rivera},
 pdfkeywords={arduino, sistemas digitales}}
@@ -26,7 +26,7 @@ pdfkeywords={arduino, sistemas digitales}}
 
 
 \begin{abstract}
-Esta es una práctica para aprender el uso de tipos de datos compuestos y memorias en el ambiente Arduino. Se utilizará la consola serial para visualizar strings y arreglos de caracteres.
+Esta es una práctica donde se utilizarán máquinas de estados para realizar tareas en paralelo sin realizar bloqueos.
 \end{abstract}
 
 \section{Descripción}
@@ -45,33 +45,32 @@ Para esta práctica se necesitarán los siguientes materiales.
 \end{tabular}
 \end{center}
 
-\textbf{Nota:} el Arduino Due no podrá ser utilizado para esta práctica, ya que carece de EEPROM.
-
 \section{Requerimientos}
 
 Para la conclusión satisfactoria de este laboratorio se deberán cumplir con los siguientes requerimientos:
 
 \begin{itemize}
-	\item Almacenar una serie de datos en la memoria EEPROM.
-	\item Leer los datos almacenados en la memoria EEPROM utilizando arreglos de caracteres.
-	\item Imprimir en la consola serial los datos obtenidos.
-	\item Leer diversos mensajes de la memoria de acuerdo con lo recibido por el puerto serial.
+	\item Crear un parpadeo de un LED que mantenga el LED encendido por un tiempo determinado y apagado por dos otro tiempo distinto, controlado por una máquina de estados. Los tiempos iniciales serán: encendido 1s y apagado 2s.
+	\item Crear una máquina de estados que permita al usuario navegar por una serie de menús. Los menús serán mostrados al usuario en la consola serial. El usuario ingresará su selección usando la consola serial.
+	\item Incluir elementos en el menú que permitan realizar incrementos o decrementos relativos a los tiempos de encendido y apagado del LED. Por ejemplo, sumarle o restarle 500ms al tiempo actual.
+	\item Incluir elementos en el menú que permitan realizar modificaciones directas a los tiempos de encendido y apagado del LED. Por ejemplo, seleccionar 1s para encendido o seleccionar 3s para apagado.
+	\item Incluir elementos en el menú que permitan reestablecer el valor inicial de uno o ambos tiempos.
+	\item Incluir elementos en el menú principal que permita imprimr el valor actual de los intervalos de encendido o apagado.
 \end{itemize}
-
 
 \section{Procedimiento}
 
 \subsection{Charla preliminar}
 
 \begin{enumerate}
-	\item El profesor impartirá una breve charla sobre conceptos de importancia en el desarrollo del proyecto. Se deberá poner atención a esta charla y participar de forma activa con las preguntas y dudas que surjan.
+	\item El profesor impartirá una breve charla de repaso sobre los conceptos de funciones y máquinas de estados.
 \end{enumerate}
 
 
 \subsection{Preparación}
 
 \begin{enumerate}[resume]
-	\item Se deberá realizar el diseño del programa en un diagrama de flujo sencillo. Este diagrama de flujo se deberá realizar en papel y ser mostrado al profesor antes de ser programado. Se sugiere utilizar bloques con operaciones sencillas en el diseño de tal forma que se puedan realizar implementaciones parciales.
+	\item Se deberá realizar el diseño del menú a utilizar en papel. Se deberá mostrar la propuesta al profesor antes de ser implementada.
 \end{enumerate}
 
 
@@ -88,6 +87,7 @@ Para la conclusión satisfactoria de este laboratorio se deberán cumplir con lo
 	\item Cuando se haya concluido con todos los requerimientos, se deberá realizar una última demostración al profesor y se concluirá la práctica.
 \end{enumerate}
 
+
 \section{Informe}
 
 El informe que se deberá presentar constará de las siguientes partes:
@@ -95,9 +95,9 @@ El informe que se deberá presentar constará de las siguientes partes:
 \begin{enumerate}
   \item Encabezado
   \item Resumen o abstract
-  \item Descripción del circuito
+  \item Descripción del circuito y el menú
   \item Listado de materiales
-  \item Descripción del programa
+  \item Descripción del programa realizado
   \item Conceptos aprendidos
 \end{enumerate}
 
@@ -105,10 +105,9 @@ El informe deberá realizarse utilizando el sistema de preparación de documento
 
 La lista de componentes deberá incluir los circuitos integrados y elementos activos utilizados en la práctica con sus números de parte detallados, la cantidad y valor de los elementos pasivos utilizados y cualquier otro elemento eléctrico utilizado en el circuito. No se deberán incluir cables, bases para circuitos integrados, protoboards, etc.
 
-
 Para presentar la descripción del programa, se deberá hacer una explicación de cómo funciona el programa. Se podrá ilustrar esta sección con recortes del programa. Los recortes del listado del programa se deberán presentar utilizando el ambiente \texttt{verbatim}, y con las tabulaciones correctas. 
 
-Los conceptos aprendidos deberán ser una lista de notas importantes que se hayan recogido durante la clase. 
+Los conceptos aprendidos deberán ser una lista de notas importantes que se hayan recogido durante la clase y de los conceptos que se aplicaron en la práctica. Deberá realizarse una breve explicación de cada elemento en la lista.
 
 Se castigará duramente el intento de plagio.
 
@@ -118,18 +117,18 @@ La evaluación de este práctica será con una calificación de 0 a 100, distrib
 
 \begin{center}
  \begin{tabular}{p{0.35\textwidth}|c}\hline
-   Funcionamiento del circuito (de acuerdo a los requisitos indicados anteriormente) 					     & 35\% \\\hline
-   Descipción de los programas			& 25\% \\\hline
+   Funcionamiento del circuito (de acuerdo a los requisitos indicados anteriormente) 					     & 40\% \\\hline
+   Calidad del informe	  				& 10\% \\\hline
+   Descripción del programa				& 20\% \\\hline
    Conceptos Aprendidos					& 20\% \\\hline
-   Encabezado, componentes, descripción & 10\% \\\hline
-   Calidad del informe					& 10\% \\\hline\hline
+   Encabezado, componentes, descripción & 10\% \\\hline\hline
    Total								& 100\% \\
  \end{tabular}
 \end{center}
 
-La calificación del rubro de funcionamiento del circuito es condicional a la entrega del informe correspondiente.
+La sección ``calidad del informe'' corresponde a 10 puntos que podrán obtenerse en caso de que el informe esté escrito con correcta redacción y ortografía y esté presentado de forma correcta.
 
-De la sección de calidad del informe se sustraerán puntos en caso de que el informe tenga faltas ortográficas, gramaticales u otros errores de forma y presentación.
+Este documento puede usarse como base para el informe, pero en el mismo deberán incluirse solamente las secciones especificadas anteriormente y nada más.
 
 Si por motivos justificados se requiere de más tiempo para completar el informe, esta deberá ser solicitada al profesor al menos con 24 horas de anticipación.
 

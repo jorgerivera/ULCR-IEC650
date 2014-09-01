@@ -3,7 +3,7 @@
 \usepackage[spanish]{babel}
 \usepackage{enumitem}
 
-\title{Laboratorio 3: Arduino - Memorias\\ y Tipos de Datos}
+\title{Laboratorio 6: Arduino -- Librerías}
 \author{Prof. Ing. Jorge Rivera G.}
 \date{\today}
 
@@ -15,7 +15,7 @@ urlcolor={black}}
 \usepackage[\MYhyperrefoptions]{hyperref}
 
 \begin{document}
-\hypersetup{pdftitle={Laboratorio 3: Memorias y Tipos de Datos},
+\hypersetup{pdftitle={Laboratorio 6: Arduino -- Librerías},
 pdfsubject={IEC-650 Laboratorio de Sistemas Digitales},
 pdfauthor={Ing. Jorge Rivera},
 pdfkeywords={arduino, sistemas digitales}}
@@ -26,7 +26,7 @@ pdfkeywords={arduino, sistemas digitales}}
 
 
 \begin{abstract}
-Esta es una práctica para aprender el uso de tipos de datos compuestos y memorias en el ambiente Arduino. Se utilizará la consola serial para visualizar strings y arreglos de caracteres.
+Esta es una práctica para aprender el diseño y desarrollo de librerías para la plataforma Arduino.
 \end{abstract}
 
 \section{Descripción}
@@ -45,19 +45,19 @@ Para esta práctica se necesitarán los siguientes materiales.
 \end{tabular}
 \end{center}
 
-\textbf{Nota:} el Arduino Due no podrá ser utilizado para esta práctica, ya que carece de EEPROM.
-
 \section{Requerimientos}
 
 Para la conclusión satisfactoria de este laboratorio se deberán cumplir con los siguientes requerimientos:
 
 \begin{itemize}
-	\item Almacenar una serie de datos en la memoria EEPROM.
-	\item Leer los datos almacenados en la memoria EEPROM utilizando arreglos de caracteres.
-	\item Imprimir en la consola serial los datos obtenidos.
-	\item Leer diversos mensajes de la memoria de acuerdo con lo recibido por el puerto serial.
+	\item Crear una clase que represente a un LED.
+	\item Crear una función que encienda el LED.
+	\item Crear una función que apague el LED.
+	\item Crear una función que haga que el LED parpadeé 3 veces rápidamente.
+	\item Crear una función que haga que el LED parpadeé 3 veces lentamente.
+	\item Crear una función que haga que el LED brille progresivamente usando PWM.
+	\item Crear un menú sencillo usando el puerto serial para utilizar las funciones de la librería.
 \end{itemize}
-
 
 \section{Procedimiento}
 
@@ -65,13 +65,6 @@ Para la conclusión satisfactoria de este laboratorio se deberán cumplir con lo
 
 \begin{enumerate}
 	\item El profesor impartirá una breve charla sobre conceptos de importancia en el desarrollo del proyecto. Se deberá poner atención a esta charla y participar de forma activa con las preguntas y dudas que surjan.
-\end{enumerate}
-
-
-\subsection{Preparación}
-
-\begin{enumerate}[resume]
-	\item Se deberá realizar el diseño del programa en un diagrama de flujo sencillo. Este diagrama de flujo se deberá realizar en papel y ser mostrado al profesor antes de ser programado. Se sugiere utilizar bloques con operaciones sencillas en el diseño de tal forma que se puedan realizar implementaciones parciales.
 \end{enumerate}
 
 
@@ -88,6 +81,7 @@ Para la conclusión satisfactoria de este laboratorio se deberán cumplir con lo
 	\item Cuando se haya concluido con todos los requerimientos, se deberá realizar una última demostración al profesor y se concluirá la práctica.
 \end{enumerate}
 
+
 \section{Informe}
 
 El informe que se deberá presentar constará de las siguientes partes:
@@ -97,7 +91,8 @@ El informe que se deberá presentar constará de las siguientes partes:
   \item Resumen o abstract
   \item Descripción del circuito
   \item Listado de materiales
-  \item Descripción del programa
+  \item Esquemático o diagrama del circuito
+  \item Listado del programa realizado con comentarios
   \item Conceptos aprendidos
 \end{enumerate}
 
@@ -105,8 +100,9 @@ El informe deberá realizarse utilizando el sistema de preparación de documento
 
 La lista de componentes deberá incluir los circuitos integrados y elementos activos utilizados en la práctica con sus números de parte detallados, la cantidad y valor de los elementos pasivos utilizados y cualquier otro elemento eléctrico utilizado en el circuito. No se deberán incluir cables, bases para circuitos integrados, protoboards, etc.
 
+Para realizar el esquemático del circuito, se deberá utilizar una herramienta apropiada. Utilice símbolos apropiados para un esquemático. No son admisibles diagramas realizados en Microsoft Paint, Adobe Photoshop u otras herramientas similares. Se sugiere utilizar Fritzing.
 
-Para presentar la descripción del programa, se deberá hacer una explicación de cómo funciona el programa. Se podrá ilustrar esta sección con recortes del programa. Los recortes del listado del programa se deberán presentar utilizando el ambiente \texttt{verbatim}, y con las tabulaciones correctas. 
+Para presentar el listado del programa se deberá utilizar la fuente \texttt{typewriter} de \LaTeX\ o el ambiente \texttt{verbatim}, y con las tabulaciones correctas. Se deberán presentar los comentarios adecuados para el código realizado en la línea inmediatamente anterior al código que se esté comentando. No se deberán mezclar comentarios y código en la misma línea.
 
 Los conceptos aprendidos deberán ser una lista de notas importantes que se hayan recogido durante la clase. 
 
@@ -118,11 +114,11 @@ La evaluación de este práctica será con una calificación de 0 a 100, distrib
 
 \begin{center}
  \begin{tabular}{p{0.35\textwidth}|c}\hline
-   Funcionamiento del circuito (de acuerdo a los requisitos indicados anteriormente) 					     & 35\% \\\hline
-   Descipción de los programas			& 25\% \\\hline
-   Conceptos Aprendidos					& 20\% \\\hline
-   Encabezado, componentes, descripción & 10\% \\\hline
-   Calidad del informe					& 10\% \\\hline\hline
+   Funcionamiento del circuito (de acuerdo a los requisitos indicados anteriormente) 					     & 30\% \\\hline
+   Listado del programa					& 15\% \\\hline
+   Conceptos Aprendidos					& 25\% \\\hline
+   Encabezado, componentes, descripción & 15\% \\\hline
+   Calidad del informe					& 15\% \\\hline\hline
    Total								& 100\% \\
  \end{tabular}
 \end{center}
