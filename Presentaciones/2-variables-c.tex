@@ -1,0 +1,93 @@
+\documentclass[handout,xcolor=dvipsnames]{beamer}
+
+\usepackage[utf8]{inputenc}
+%\usepackage{default}
+\usetheme[width=50pt]{ULatina}   % Bergen, Darmstadt
+\usecolortheme[named=Green]{structure}
+\usepackage{graphicx}
+\usepackage{pgfpages}
+\usepackage{tikz}
+\usepackage[spanish]{babel}
+\usepackage[normalem]{ulem} % to use \sout{} for strikethrough
+
+
+%\setbeameroption{show notes on second screen}
+%\setbeamersize{sidebar width left=50pt}
+
+
+\title[C/C++]{Introducción a C/C++}
+\subtitle{Variables compuestas}
+\author{Prof. Jorge Rivera~Guti\'errez}
+\institute{Universidad Latina de Costa Rica\\ Ingenier\'\i a en Electr\'onica}
+\logo{\includegraphics[height=45pt]{world.png}}
+\date{I cuatrimestre 2014}
+\newcommand{\pageframe}[1]{\frame{\begin{center}{ \Huge #1 }\end{center}}}
+
+\begin{document}
+
+\begin{frame}
+ \maketitle
+\end{frame}
+
+\section{Variables}
+\pageframe{Variables Compuestas}
+
+\begin{frame}{Tipos de Variables}
+ \begin{block}{Alguos tipos de variables}
+ \begin{center}
+ \begin{tabular}{lcc}\hline
+ 	Tipo	& 	 Tamaño & Rango \\\hline\hline
+{\tt int} &  16-bits & -32\,768 \ldots 32\,767 \\\hline
+{\tt unsigned int}  & 16-bits &  0 \ldots 65\,535 \\\hline 
+{\tt char} &  8-bits & 0 \ldots 255 (ASCII) \\\hline
+{\tt byte} &  8-bits & 0 \ldots 255 \\\hline
+ \end{tabular}
+\end{center}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]\frametitle{Arreglos}
+
+\begin{block}{Arreglos de variables {\tt char}}
+\begin{verbatim}
+char str1[15];
+char str2[4] = {'l', 'a', 'b'};
+char str3[4] = {'l', 'a', 'b', '\0'};
+char str4[ ] = "lab";
+char str5[8] = "lab";
+char str6[15] = "lab";
+\end{verbatim}
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Obteniendo un dato de un arreglo}
+\begin{block}{Leer un dato}
+\begin{verbatim}
+char dato;
+char str[12] = "laboratorio";
+
+dato = str[0];  \\ dato 'l'
+dato = str[5];  \\ dato 'a'
+dato = str[11]; \\ dato '\0'
+dato = str[12]; \\ ERROR! (fuera de rango)
+\end{verbatim}
+\end{block}
+\end{frame}
+
+\begin{frame}[fragile]\frametitle{Cambiando un dato de un arreglo}
+\begin{block}{Leer un dato}
+\begin{verbatim}
+char dato;
+char str[12] = "laboratorio";
+
+str[0] = 'A';  \\ "Aaboratorio"
+str[3] = 65;  \\ "AabAratorio"
+\end{verbatim}
+\end{block}
+\end{frame}
+
+
+
+\end{document}

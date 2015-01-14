@@ -15,7 +15,7 @@ urlcolor={black}}
 \usepackage[\MYhyperrefoptions]{hyperref}
 
 \begin{document}
-\hypersetup{pdftitle={Laboratorio 2: Puerto Serial de Arduino },
+\hypersetup{pdftitle={Laboratorio 2: Puerto Serial de Arduino},
 pdfsubject={IEC-650 Laboratorio de Sistemas Digitales},
 pdfauthor={Ing. Jorge Rivera},
 pdfkeywords={arduino, sistemas digitales}}
@@ -54,12 +54,18 @@ Para esta práctica se necesitarán los siguientes materiales.
 Para la conclusión satisfactoria de este laboratorio se deberán cumplir con los siguientes requerimientos:
 
 \begin{itemize}
-	\item Definir un protocolo de comunicación, con las acciones a seguir para cada dato recibido.
+	\item Definir un protocolo de comunicación, con las acciones a seguir para cada dato recibido. Se deberán incluir al menos diez acciones, que incluyan todos los siguientes tipos de acciones:
+	\begin{enumerate}
+		\item Encender un led.
+		\item Encender un led parcialmente.
+		\item Apagar un led.
+		\item Establecer una combinación determinada.
+	\end{enumerate}
 	\item Mostrar la lista de opciones o menú en el puerto serie.
 	\item Recibir un dato en el puerto serie.
 	\item Procesar el dato recibido y cambiar el estado de los LEDs de acuerdo con lo especificado por el protocolo.
 	\item Enviar una respuesta por el puerto serie.
-	\item Integrar el funcionamiento de un interruptor que permita retornar los LEDs a un estado inicial.
+	\item Leer el estado de un interruptor y retornar los LEDs a un estado inicial en caso de estar presionado.
 \end{itemize}
 
 \section{Procedimiento}
@@ -75,8 +81,8 @@ Para la conclusión satisfactoria de este laboratorio se deberán cumplir con lo
 
 \begin{enumerate}[resume]
 	\item Se deberá realizar el diseño de un circuito, indicando los números de pines a utilizar en la tarjeta y la forma de conexión del resto de los componentes. Este diseño se deberá realizar en papel y ser mostrado al profesor antes de ser alambrado.
-
-	\item Se deberá realizar el diseño del programa en un diagrama de flujo sencillo. Este diagrama de flujo se deberá realizar en papel y ser mostrado al profesor antes de ser programado. Se sugiere utilizar bloques con operaciones sencillas en el diseño de tal forma que se puedan realizar implementaciones parciales.
+	
+	\item Se deberá definir el protocolo de comunicación a manera de una lista de caracteres que se podrán ingresar y el efecto que dichos caracteres tendrán en el sistema.
 \end{enumerate}
 
 \subsection{Alambrado del circuito}
@@ -124,6 +130,17 @@ Para presentar la descripción del programa, se deberá hacer una explicación d
 Los conceptos aprendidos deberán ser una lista de notas importantes que se hayan recogido durante la clase. 
 
 Se castigará duramente el intento de plagio.
+
+\section{Prueba corta}
+
+Después de realizar la práctica, cada estudiante realizará una prueba corta. Para dicha prueba, los estudiantes deberán estudiar los siguientes temas:
+
+\begin{enumerate}
+	\item Estructuras de control \texttt{if} y \texttt{switch}.
+	\item Funciones de la librería \texttt{Serial} (\texttt{available()}, \texttt{print()}, \texttt{println()} y \texttt{read()}).
+	\item Funciones para salidas analógicas en Arduino (\texttt{analogWrite()}).
+\end{enumerate}
+
 
 \section{Evaluación}
 
