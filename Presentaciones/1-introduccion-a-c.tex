@@ -1,4 +1,4 @@
-\documentclass[handout,xcolor=dvipsnames]{beamer}
+\documentclass[xcolor=dvipsnames]{beamer}
 
 \usepackage[utf8]{inputenc}
 %\usepackage{default}
@@ -20,7 +20,7 @@
 \author{Prof. Jorge Rivera~Guti\'errez}
 \institute{Universidad Latina de Costa Rica\\ Ingenier\'\i a en Electr\'onica}
 \logo{\includegraphics[height=45pt]{world.png}}
-\date{I cuatrimestre 2014}
+\date{I cuatrimestre 2015}
 \newcommand{\pageframe}[1]{\frame{\begin{center}{ \Huge #1 }\end{center}}}
 
 \begin{document}
@@ -28,6 +28,29 @@
 \begin{frame}
  \maketitle
 \end{frame}
+\section{Comentarios}
+\pageframe{Comentarios}
+\begin{frame}{Comentarios}
+	\begin{block}{Comentarios de una línea}
+		\tt{ //  Esto es un comentario}\\
+		\tt{ <codigo> //  Esto tambien es un comentario}
+	\end{block}
+	\only<2>{
+	\begin{block}{Comentarios de más de una línea}
+		\tt{ /* Nada de esto}\\
+		\tt{ es codigo}\\
+		\tt{ que vaya a ser ejecutado */}\\
+	\end{block}}
+	\only<3>{
+	\begin{block}{Comentarios de más de una línea}
+		\tt{/**************************}\\
+		\tt{~* Nada de esto}\\
+		\tt{~* es codigo}\\
+		\tt{~* que vaya a ser ejecutado.}\\
+		\tt{~**************************/}\\
+	\end{block}}
+\end{frame}
+
 
 \section{Variables}
 \pageframe{Variables}
@@ -141,7 +164,7 @@ if(cond1) \{\\
 \end{block}
 \column{.45\textwidth}
 \begin{block}{Diagrama}
-\includegraphics[width=\textwidth]{if.png}
+\includegraphics[width=0.5\textwidth]{if.png}
 \end{block}
 \end{columns}
 \end{frame}

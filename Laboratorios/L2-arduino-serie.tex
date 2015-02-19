@@ -31,7 +31,7 @@ Esta es una práctica para aprender el funcionamiento de la consola serial y las
 
 \section{Descripción}
 
-Esta práctica será realizada enteramente en el laboratorio. Los estudiantes se organizarán en parejas. Cada pareja realizará un pequeño circuito con un interruptor y leds, utilizando una tarjeta Arduino.
+Esta práctica será realizada enteramente en el laboratorio. Cada estudiante realizará un pequeño circuito con un interruptor y leds, utilizando una tarjeta Arduino.
 
 \section{Materiales}
 
@@ -54,18 +54,12 @@ Para esta práctica se necesitarán los siguientes materiales.
 Para la conclusión satisfactoria de este laboratorio se deberán cumplir con los siguientes requerimientos:
 
 \begin{itemize}
-	\item Definir un protocolo de comunicación, con las acciones a seguir para cada dato recibido. Se deberán incluir al menos diez acciones, que incluyan todos los siguientes tipos de acciones:
-	\begin{enumerate}
-		\item Encender un led.
-		\item Encender un led parcialmente.
-		\item Apagar un led.
-		\item Establecer una combinación determinada.
-	\end{enumerate}
-	\item Mostrar la lista de opciones o menú en el puerto serie.
-	\item Recibir un dato en el puerto serie.
-	\item Procesar el dato recibido y cambiar el estado de los LEDs de acuerdo con lo especificado por el protocolo.
-	\item Enviar una respuesta por el puerto serie.
-	\item Leer el estado de un interruptor y retornar los LEDs a un estado inicial en caso de estar presionado.
+	\item Mostrar la lista de opciones o menú en el puerto serie primario.
+	\item Recibir un dato en el puerto serie primario.
+	\item Procesar el dato recibido y actuar de acuerdo al protocolo discutido en la clase. 
+	\item Para los ``comandos'' que cambian el estado de los LEDs, deberá ejecutarse dicha acción.
+	\item Para el ``comando'' que envía un mensaje, deberá capturarse el mensaje (terminado con un salto de línea) y retransmitirse por un puerto serial secundario.	
+	\item Enviar una respuesta por el puerto serie primario.
 \end{itemize}
 
 \section{Procedimiento}
@@ -130,17 +124,6 @@ Para presentar la descripción del programa, se deberá hacer una explicación d
 Los conceptos aprendidos deberán ser una lista de notas importantes que se hayan recogido durante la clase. 
 
 Se castigará duramente el intento de plagio.
-
-\section{Prueba corta}
-
-Después de realizar la práctica, cada estudiante realizará una prueba corta. Para dicha prueba, los estudiantes deberán estudiar los siguientes temas:
-
-\begin{enumerate}
-	\item Estructuras de control \texttt{if} y \texttt{switch}.
-	\item Funciones de la librería \texttt{Serial} (\texttt{available()}, \texttt{print()}, \texttt{println()} y \texttt{read()}).
-	\item Funciones para salidas analógicas en Arduino (\texttt{analogWrite()}).
-\end{enumerate}
-
 
 \section{Evaluación}
 
