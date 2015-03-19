@@ -1,0 +1,65 @@
+\documentclass{beamer}
+
+\usepackage{default}
+
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\begin{frame}[fragile=singleslide]\frametitle{Quiz 6}
+
+\begin{block}{Ejercicio único}
+\begin{small}
+A continuación se presenta el código de una librería básica. El archivo presentado tiene el nombre \verb|Perro.cpp|. Presente el código del archivo \verb|Perro.h|. 
+\end{small}
+\end{block}
+
+\vspace{-0.3in}
+\begin{columns}[t]
+\column{.45\textwidth}
+
+\begin{scriptsize}
+\begin{verbatim}
+#include "Perro.h"
+#include <Arduino.h>
+
+Perro::Perro(int p, int q) {
+  pinMode(p, OUTPUT);
+  pinMode(q, INPUT);
+  pin = p;
+  control = q;
+}
+
+Perro::ladrar() {
+  if (digitalRead(control)==HIGH) {
+  	analogWrite(pin, 128);
+  } else {
+  	analogWrite(pin, 255);	
+  }
+}
+\end{verbatim}
+\end{scriptsize}
+
+\column{.45\textwidth}
+\begin{scriptsize}
+\begin{verbatim}
+Perro::alto() {
+	analogWrite(pin, 0);
+}
+
+Perro::correr() {
+	digitalWrite(pin, HIGH);
+}
+
+Perro::comer() {
+  if (digitalRead(control)==LOW) {
+  	digitalWrite(pin, LOW);
+  }
+}
+\end{verbatim}
+\end{scriptsize}
+
+\end{columns}
+\end{frame}
+
+\end{document}

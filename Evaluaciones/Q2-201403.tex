@@ -1,0 +1,43 @@
+\documentclass{beamer}
+
+\usepackage{default}
+
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\begin{frame}[fragile=singleslide]\frametitle{Quiz 2}
+
+\begin{block}{Ejercicio único}
+El siguiente programa recibe como entrada los caracteres ``ABCDBAJCL+''. ¿Cuál será el texto impreso en la consola serial?
+\end{block}
+%\begin{block}{}
+\begin{scriptsize}
+\begin{verbatim}
+
+void loop() {
+  if (Serial.available() > 0) {
+    char dato = Serial.read();
+    switch (dato) {
+      case 'A':
+        Serial.println("Laboratorio");
+        break;
+      case 'B':
+        Serial.println("Sistemas");
+        break;
+      case 'C':
+        Serial.println("Digitales");
+        break;
+      default:
+        Serial.println("Universidad Latina");
+        break;
+    }
+  }  
+}
+
+\end{verbatim}
+\end{scriptsize}
+
+\end{frame}
+
+\end{document}
