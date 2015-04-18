@@ -114,7 +114,7 @@ class LabDigitales(object):
 	def __init__(self):
 		for s in students:
 			self.st[s] = st_controls[s](logcb=self.logcb,valuecb=self.valuecb)
-		if getattr(self,'Bind'):
+		if 'Bind' in dir(self):
 			import wx
 			self.Bind(wx.EVT_CLOSE, self.OnClose)
 	
@@ -144,5 +144,6 @@ class LabDigitales(object):
 	def OnClose(self, event):
 		for s in students:
 			self.st[s].close()
-		event.Skip()
+		if event and 'Skip' in dir(event):
+			event.Skip()
 
